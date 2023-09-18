@@ -2,6 +2,7 @@ package com.example.mad_p7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
@@ -11,12 +12,12 @@ class Youtube : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube)
         val webView = findViewById<WebView>(R.id.webviwe)
-        webView.webViewClient = WebViewClient()
-        val webSettings = webView.settings
+        val y_id="fJn9B64Znrk"
+        val webSettings:WebSettings = webView.settings
         webSettings.javaScriptEnabled = true
        webSettings.loadWithOverviewMode=true
         webSettings.useWideViewPort=true
-        webView.loadUrl("https://youtube.com/embed/fjn9B64Znrk")
+        webView.loadUrl("https://www.youtube.com/embed/$y_id")
     }
 
     override fun onBackPressed() {
